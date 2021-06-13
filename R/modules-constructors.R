@@ -163,9 +163,8 @@ ModuleCreateTableForOneVar <- function(x) { # Give a vector
     ## Reorder variables
     freq <- freq[c("n","miss","p.miss","level","freq","percent","cum.percent")]
     
-    ## Ordering the levels of the categorical variable in the loop 
+    ## Ordering levels of the categorical variable in the loop 
     ord = order(freq$percent,decreasing = TRUE)
-    ## ordreing the table of the categorical variable 
     freq = freq[ord,]
 
     ## Return result as a data frame
